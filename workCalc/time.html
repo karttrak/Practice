@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Punch Card</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular.min.js"></script>
+
+    <script>
+        angular.module('myApp', [])
+                .controller('myController', function ($scope) {
+                    $scope.time = '7 ';
+                    $scope.lunch = 1;
+                    $scope.leaveTime = '4:00 pm';
+                    $scope.calcTime = function() {
+                        var hours = $scope.time.split(' ');
+                        $scope.leaveTime = (hours[0] - 4 + $scope.lunch) + ':' + hours[1] + " pm";
+                    };
+                });
+    </script>
+
+    <style>
+        html {background-color: #232323;}
+        body {color:darkcyan;}
+        .form1 {width:80px; margin-left:2px; background-color:#232323; color:darkcyan; border-color:#232323; border-width:0px}
+        .form1:focus {outline:0px}
+        .form2 {width:30px; background-color:#232323; color:darkcyan; border-color:#232323; border-width:0px}
+        .form2:focus {outline:0px}
+    </style>
+
+</head>
+
+<body ng-controller="myController">
+<form> <h1>
+    Time you started working: <input ng-model="time" ng-keyup="calcTime()" class="form1"> <br>
+    How long for lunch today? <input ng-model="lunch" ng-change="calcTime()" type="number" class="form2"> <br>
+</form>
+You can leave at <b>{{leaveTime}}</b> today.</h1>
+</body>
+</html>

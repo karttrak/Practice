@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Practice Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular.min.js"></script>
+
+    <script src="main.js"></script>
+    <script src="contactInfo/contactInfo.js"></script>
+    <script src="slideshow/slideshow.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body ng-controller="myController">
+<contact-info></contact-info>
+
+<div ng-repeat="member in people">
+    <select style="width: 150px" ng-options="person.name for person in people" ng-change="people[$index].show = false" ng-model="item1" ></select>
+    {{member.show}}
+</div>
+
+<h2>What is your name?</h2>
+
+<form ng-submit="name">
+    <input ng-keyup="greeting = 'Hello, '" ng-model="name" type="text" maxlength="20">
+    {{greeting}}
+    <my-directive data="name"></my-directive>
+</form>
+
+<start-slideshow></start-slideshow>
+
+</body>
+</html>
