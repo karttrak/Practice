@@ -1,3 +1,10 @@
-/**
- * Created by kat0 on 6/19/2014.
- */
+angular.module('gameApp', [])
+    .controller('gameController', function($scope) {
+        $scope.name;
+        $scope.startGame = function() {
+            var check = prompt("What is your name?");
+            if (check.length > 0) {
+                $scope.name = check;
+            }
+        };
+    });
