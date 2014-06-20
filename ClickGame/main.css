@@ -4,7 +4,7 @@ html {
 body {
     color: white
 }
-.btn1 {
+.startButton {
     width: 200px;
     height: 100px;
     top: 30%;
@@ -15,6 +15,17 @@ body {
     border-width: 0px;
     background-color: #22aa22;
 }
-.btn1:focus {
-    outline: 0px;
+.startButton:hover { background-color: #3b3 }
+.startButton:active { background-color: #191 }
+.startButton:focus { outline: 0px; }
+.monster {
+    width: 100px;
+    height: 50px;
+    border-radius: 10%;
+    border-width: 0px;
+    background-color: #c33;
+    margin: 2px;
 }
+.monster:hover { background-color: #d44 }
+.monster:active { background-color: #b22 }
+.monster:focus { outline: 0px; }

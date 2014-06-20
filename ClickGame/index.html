@@ -8,7 +8,9 @@
 </head>
 
 <body ng-controller="gameController">
-<button class="btn1" ng-click="startGame()" ng-hide="name.length > 0">Start Game</button>
-    {{name}}
+<!--<button class="btn1" ng-click="startGame()" ng-hide="name.length > 0">Start Game</button>-->
+<button class="monster" ng-click="fight($index)" ng-repeat="monster in monsters">{{monster.difficulty}}</button>
+{{monsters[i].difficulty}}  {{monsters[i].health}}  {{monsters[i].damage}}
+
 </body>
 </html>

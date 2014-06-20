@@ -1,0 +1,33 @@
+.paddle {
+    width: 50px;
+    height: 20px;
+    background-color: black;
+    display: inline-block;
+
+    transition-property: width, height, transform;
+    transition-duration: 3s;
+    transition-timing-function: cubic-bezier(.5,1.2,.5,-0.2);
+}
+.paddle:hover {
+    height: 900px;
+}
+.player1 {
+    background-color: darkslategray;
+    float: right;
+}
+.ball {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+
+    transition-property: width, height, transform;
+    transition-duration: 3s;
+    transition-timing-function: cubic-bezier(.2,-0.34,.78,1.38);
+}
+.ball:hover {
+    left: 88%;
+}
