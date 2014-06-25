@@ -6,5 +6,5 @@
     <button class="btnStyle" ng-click="countDown()"> <img class="imgStyle2" src="http://goo.gl/j2uYth"> </button>
     <span class="text1" ng-click="showPups = !showPups">Puppy pic {{i+1}}</span>
     <button class="btnStyle" ng-click="countUp()"> <img class="imgStyle2" src="http://goo.gl/kXnOPg"> </button> <br>
-    <img class='imgStyle1' ng-show="showPups" ng-src={{puppies[i]}}>
+    <img class='imgStyle1' ng-if="showPups" ng-src={{puppies[i]}}>
 </body>
