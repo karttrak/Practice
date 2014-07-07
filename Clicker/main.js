@@ -1,7 +1,7 @@
 angular.module('myApp', [])
 	.controller('myController', function($scope, $http, $timeout) {
 		$scope.totalClicks = 0;
-		$scope.clickRate = 100;
+		$scope.clickRate = 0;
 		$scope.upgrades = [
 		{
 			"cost": 15,
@@ -42,18 +42,9 @@ angular.module('myApp', [])
 			}
 		};
 
-
-		$scope.getData = function(){
-    	$http.get('style.css')
-      		.success(function(data, status, headers, config) {
-      		console.log('Fetched data!');
-    		});
-  		};
-
 		$scope.intervalFunction = function () {
 			$scope.totalClicks += ($scope.clickRate/100);
-				$timeout(function() {
-		      	$scope.getData();
+            $timeout(function() {
 		      	$scope.intervalFunction();
 			}, 10)
 		};

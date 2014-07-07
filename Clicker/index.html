@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
-
 <head>
-	<title>Clicker</title>
-	<link rel="stylesheet" href="main.css">
+	<title>Cookie Clicker</title>
 	<script src="https://code.angularjs.org/1.3.0-beta.5/angular.js"></script>
 	<script src="main.js"></script>
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body ng-controller="myController">
 
-	<button class="mainButton" ng-click="increment()"> </button>
-	<p class="counter">{{totalClicks.toFixed(0)}}</p>
-	<p class="clickRate">{{clickRate.toFixed(1)}} clicks per second</p>
+    <div class="buildingsPanel">
+        <div ng-repeat="upgrade in upgrades">
+            <button class="buyButton" ng-click="purchase(upgrade)"><h4>{{upgrade.cost.toFixed(0)}}</h4></button>
+            Increase by {{upgrade.CPSincrease}} CPS <br>
+        </div>
+    </div>
 
-	<div ng-repeat="upgrade in upgrades">
-		<button class="buyButton" ng-click="purchase(upgrade)" ><h4>{{upgrade.cost.toFixed(0)}}</h4></button> 
-		Increase by {{upgrade.CPSincrease}} CPS <br>
-	</div>
-	
+    <div class="mainPanel">
+        <img class="mainCookie" ng-click="increment()" src="https://lh6.ggpht.com/0O-HefMHNwemt4gnJ4YfNq3xFaTBaiFcwIRiUpzDZ1KObI8ptEMgoHOSDiy_tumRWexz=w300">
+        <p class="counter">{{totalClicks.toFixed(0)}}</p>
+        <p class="clickRate">{{clickRate.toFixed(1)}} cookies per second</p>
+    </div>
+
+    <div class="upgradesPanel">
+
+    </div>
+
 
 </body>
 

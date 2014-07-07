@@ -2,45 +2,69 @@ html {
 	background-color: #191919;
 }
 body {
-	background-color: #191919;
-	color: #c0c0c0;
+	/*background-color: #191919;*/
+	color: #ff0;
 	
 }
-.mainButton {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	margin-top: -50px;
-	margin-left: -50px;
-	width: 100px;
-	height: 100px;
-	border-radius: 50px;
-	background-color: #009999;
+button {
+    border: none;
 }
-.mainButton:hover {
-	background-color: #10a9a9;
+.buildingsPanel {
+    /*background-color: gray;*/
+    float: left;
+    width: 30%;
 }
-.mainButton:active {
-	background-color: #008989;
+.mainPanel {
+    float: left;
+    width: 40%;
+    text-align: center;
+    height: 900px;
+    diplay: block;
+    /*background-color: lightsteelblue;*/
 }
-.mainButton:focus {
+.upgradesPanel {
+    float: left;
+    width: 30%;
+    height: 900px;
+    /*background-color: lightgreen;*/
+}
+.mainCookie {
+    position: fixed;
+    height: 200px;
+    width: 200px;
+    top: 40%;
+    margin-top: -100px;
+    margin-left: -100px;
+}
+.mainCookie:hover {
+	height: 204px;
+    width: 204px;
+    margin-top: -102px;
+    margin-left: -102px;
+}
+.mainCookie:active {
+    height: 198px;
+    width: 198px;
+    margin-top: -99px;
+    margin-left: -99px;
+}
+.mainCookie:focus {
 	outline: 0;
 }
 .counter {
-	position: fixed;
-	top: 50%;
-	left: 53%;
+	position: relative;
+	top: 23%;
 }
 .clickRate {
-	position: fixed;
-	top: 40%;
-	left: 47%;
+	position: relative;
+	top: 22%;
 }
 .buyButton {
 	background-color: #987654;
 	border-radius: 30px;
 	width: 100px;
 	height: 50px;
+    margin-bottom: 3px;
 }
 .buyButton:hover {
 	background-color: #a87664;
