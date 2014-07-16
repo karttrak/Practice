@@ -3,35 +3,54 @@ html {
 	height: 100%;
 	background: darkslategray;
 }
-#border {
-	padding: 15px 20px 15px 20px;
-	width: 900px;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 5%;
-	background-color: #D2B48C;
-
-	transition: border-radius ease-in-out 1s;
-	-webkit-transition: border-radius ease-in-out 1s;
-}
-#border:hover {
-	border-radius: 30%;
-}
 #container {
+    width: 900px;
 	padding: 80px 0px 50px 0px;
 	margin-top: auto;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: left;
-	border-radius: 5%;
+    border: solid #D2B48C 20px;
+	border-radius: 40px;
 	background-color: lightgray;
 
 	transition: border-radius ease-in-out 1s;
 	-webkit-transition: border-radius ease-in-out 1s;
 }
 #container:hover {
-	border-radius: 30%;
+	border-radius: 120px;
 }
 #content {
     margin-left: 220px;
+}
+
+#contactInfo {
+    width: 600px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    background-color: lightgray;
+}
+#contactInfo a {
+    text-decoration: none;
+}
+#contactInfo a:hover {
+    text-decoration: underline;
+}
+#header1 {
+    font-size: 60px;
+    font-family: Georgia;
+    float: left;
+    width: 60%;
+    height: 100%;
+    background-color: lightgray;
+}
+#header2 {
+    font-family: cursive;
+    text-align: center;
+    float: right;
+    width: 40%;
+    padding-top: 20px;
+    background-color: lightgray;
 }
