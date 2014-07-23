@@ -15,13 +15,10 @@ angular.module('slideshowApp', [])
 
                 $scope.i = 0;
                 $scope.countDown = function() {
-                    if ($scope.i === 0)
-                        $scope.i = $scope.puppies.length-1;
-                    else
-                        $scope.i--;
+                    ($scope.i === 0) ? ($scope.i = $scope.puppies.length-1) : $scope.i--;
                 }
                 $scope.countUp = function() {
-                    $scope.i = ($scope.i+1)%$scope.puppies.length;
+                    $scope.i = ($scope.i + 1) % $scope.puppies.length;
                 }
             }
         }

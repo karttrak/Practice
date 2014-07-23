@@ -1,0 +1,29 @@
+html {
+    background-image: url('http://wallpaperspoints.com/wp-content/uploads/2013/05/black-wood-patterns-textures-wallpaper.jpg');
+    /*background: radial-gradient(darkslategray, black);*/
+    /*background-repeat: no-repeat;*/
+    /*height: 100%;*/
+}
+body {
+    color: lightgreen;
+}
+.nrecaHeader {
+    background-color: tan;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.nrecaLogo {
+    display: block;
+    margin: auto;
+}
+.slide {
+    display: block;
+    margin: auto;
+    height: 600px;
+    max-width: 1200px;
+    background-color: lightcyan;
+}
+.slideShowButtons {
+    text-align: center;
+}

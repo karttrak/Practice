@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Better Than Prezi</title>
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="shortcut icon" href="http://goo.gl/RsHMw9">
+    <script src="https://code.angularjs.org/1.3.0-beta.5/angular.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body ng-controller="myController">
+<div class="nrecaHeader">
+    <img class="nrecaLogo" ng-click="startSlideShow = !startSlideShow" src="http://www.clasma.net/logos/Energy/NRECA/NRECA-Large.png">
+</div>
+<h1>Things I have learned:</h1>
+
+<div ng-if="startSlideShow">
+    <div class="slideShowButtons">
+        <button ng-click="previousSlide()">Prev</button>
+        <button ng-click="nextSlide()">Next</button>
+    </div>
+    <img class="slide" ng-click="nextSlide()" src="{{slideShow[i].slide}}">
+</div>
+<img class="nrecaLogo" src="http://fc08.deviantart.net/fs47/f/2009/204/9/0/My_Funny_Loading_Animation_by_wired_down.gif" ng-if="!startSlideShow">
+<ul ng-if="!startSlideShow">
+    <li>Websites</li>
+    <li>Automated testing</li>
+    <li>Fake data</li>
+    <li>Meetings</li>
+    <li>Project development</li>
+    <li>Pair programming</li>
+    <li>Code collaboration (GitHub)</li>
+</ul>
+</body>
+</html>
