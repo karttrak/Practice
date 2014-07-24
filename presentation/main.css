@@ -1,28 +1,35 @@
 html {
-    background-image: url('http://wallpaperspoints.com/wp-content/uploads/2013/05/black-wood-patterns-textures-wallpaper.jpg');
-    /*background: radial-gradient(darkslategray, black);*/
-    /*background-repeat: no-repeat;*/
-    /*height: 100%;*/
+    background-color: #ddd;
+    background-image: url(https://www.nreca.coop/wp-content/themes/modernize-v3-13/images/pattern/pattern-1.png);
 }
 body {
-    color: lightgreen;
-}
-.nrecaHeader {
-    background-color: tan;
-    width: 800px;
+    box-shadow: 0px 0px 8px gray;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
+    height: 850px;
+    width: 1000px;
+}
+.nrecaHeader {
+    background-color: white;
+    padding: 20px;
 }
 .nrecaLogo {
-    display: block;
     margin: auto;
+}
+.loadingWheel {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
 }
 .slide {
     display: block;
-    margin: auto;
-    height: 600px;
-    max-width: 1200px;
-    background-color: lightcyan;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    max-height: 650px;
+    min-height: 350px;
 }
 .slideShowButtons {
     text-align: center;
