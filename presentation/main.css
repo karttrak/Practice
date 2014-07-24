@@ -1,0 +1,36 @@
+html {
+    background-color: #ddd;
+    background-image: url(https://www.nreca.coop/wp-content/themes/modernize-v3-13/images/pattern/pattern-1.png);
+}
+body {
+    box-shadow: 0px 0px 8px gray;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 850px;
+    width: 1000px;
+}
+.nrecaHeader {
+    background-color: white;
+    padding: 20px;
+}
+.nrecaLogo {
+    margin: auto;
+}
+.loadingWheel {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+.slide {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    max-height: 650px;
+    min-height: 350px;
+}
+.slideShowButtons {
+    text-align: center;
+}
