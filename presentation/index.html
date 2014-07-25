@@ -22,27 +22,33 @@
 </head>
 
 <body ng-controller="myController">
-    <div class="nrecaHeader" ng-click="startSlideShow = !startSlideShow">
-        <img class="nrecaLogo" src="http://www.clasma.net/logos/Energy/NRECA/NRECA-Large.png">
+    <div class="nrecaNavbar">
+        <img style="margin: 5px 0px 0px 165px;" src="http://connectconference.coopwebbuilder2.com/sites/connectconference/files/images/nreca_logo_black.png">
+        <span style="margin-left: 730px; vertical-align: middle">KyleThornburgh.com</span>
     </div>
-    <div ng-if="!startSlideShow">
-        <img class="loadingWheel img-responsive" src="http://fc08.deviantart.net/fs47/f/2009/204/9/0/My_Funny_Loading_Animation_by_wired_down.gif">
-    </div>
-    <div ng-show="startSlideShow">
-        <div class="slideShowButtons">
-            <button class="btn btn-primary" ng-click="previousSlide()">Prev</button>
-            <button class="btn btn-primary" ng-click="nextSlide()">Next</button>
+    <div class="slideshowContainer">
+        <div class="nrecaHeader">
+            <img class="nrecaLogo" ng-click="startSlideShow = !startSlideShow" src="http://www.clasma.net/logos/Energy/NRECA/NRECA-Large.png">
         </div>
-        <img class="img-responsive img-rounded slide" ng-click="nextSlide()" src="{{slideShow[i].slide}}">
-        <ul ng-if="!startSlideShow">
-            <li>Websites</li>
-            <li>Automated testing</li>
-            <li>Fake data</li>
-            <li>Meetings</li>
-            <li>Project development</li>
-            <li>Pair programming</li>
-            <li>Code collaboration (GitHub)</li>
-        </ul>
+        <div ng-if="!startSlideShow">
+            <img class="loadingWheel img-responsive" src="http://fc08.deviantart.net/fs47/f/2009/204/9/0/My_Funny_Loading_Animation_by_wired_down.gif">
+        </div>
+        <div ng-show="startSlideShow" class="slideShowButtons">
+            <button class="btn" ng-click="previousSlide()">Prev</button>
+            <button class="btn" ng-click="nextSlide()">Next</button>
+        </div>
+        <div ng-show="startSlideShow" ng-click="nextSlide()">
+            <img class="img-responsive img-rounded slide" src="{{slideShow[i]}}">
+            <ul ng-if="!startSlideShow">
+                <li>Websites</li>
+                <li>Automated testing</li>
+                <li>Fake data</li>
+                <li>Meetings</li>
+                <li>Project development</li>
+                <li>Pair programming</li>
+                <li>Code collaboration (GitHub)</li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>

@@ -2,34 +2,15 @@ angular.module('myApp', [])
     .service('myService', function() {
         return {
             slides: [
-                {
-                    description: 'Build websites',
-                    slide: 'http://yourlocalpromoter.com/wp-content/uploads/2012/12/Website20.jpg'
-                },
-                {
-                    description: 'Automated tests',
-                    slide: 'http://www.olenick.com/wp-content/uploads/2014/07/Automated_Testing_Robots.png'
-                },
-                {
-                    description: 'Automated tests',
-                    slide: 'http://i.imgur.com/WTvmFUP.jpg'
-                },
-                {
-                    description: 'Pair programming',
-                    slide: 'http://vitamincr.com/wp-content/uploads/2012/04/be_gentle.jpg'
-                },
-                {
-                    description: 'Agile programming',
-                    slide: 'http://blog.rogeriopvl.com/img/scrum.png'
-                },
-                {
-                    description: 'Code collaboration',
-                    slide: 'http://www.wakanda.org/sites/default/files/blog/blog-github.png'
-                },
-                {
-                    description: '',
-                    slide: 'http://i.imgur.com/bRlVzpN.png'
-                }
+                'http://www.nebbz.com/images/information-technology.jpg',
+                'http://esellermedia.com/files/2012/07/website-building1.jpg',
+                'http://i.imgur.com/WTvmFUP.jpg',
+                'http://blog.rogeriopvl.com/img/scrum.png',
+                'http://www.olenick.com/wp-content/uploads/2014/07/Automated_Testing_Robots.png',
+                'http://vitamincr.com/wp-content/uploads/2012/04/be_gentle.jpg',
+                'http://makethingsdostuff.co.uk/sites/default/files/styles/project/public/project/GitHub.png?itok=XOrm-ttk',
+                'http://expertaccess.cincom.com/wp-content/uploads/2014/03/462416239-IT-Due-Diligence.jpg',
+                'http://i.imgur.com/bRlVzpN.png'
             ]
         }
     })
