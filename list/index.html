@@ -9,8 +9,6 @@
 <body ng-controller="myController">
     <input ng-model="name">
     <button ng-click="createNode(name)">Add node</button>
-    <ul>
-        <li ng-repeat="node in list track by $index">{{node.data}}</li>
-    </ul>
+    {{listContents}}
 </body>
 </html>

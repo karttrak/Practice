@@ -10,8 +10,8 @@
 
 <body ng-controller="mainController">
     <div id="container">
-        <div ng-include="'templates/heading.tpl.html'"></div>
-        <div id="content" ng-include="'templates/content.tpl.html'"></div>
+        <div ng-include src="'templates/heading.tpl.html'"></div>
+        <div id="content" ng-include="template"></div> {{template}}
     </div>
 </body>
 </html>

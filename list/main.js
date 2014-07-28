@@ -1,43 +1,45 @@
 angular.module('myApp', [])
     .controller('myController', function($scope) {
-        $scope.name = 'middle';
 
         function Node(data) {
             this.data = data;
             this.next = null;
-            this.prev = null;
-
-//            this.setPrev = function(prev) {
-//                this.prev = prev;
-//            };
-//            this.getPrev = function() {
-//                return this.prev;
-//            };
-//            this.setNext = function(next) {
-//                this.next = next;
-//            };
-//            this.getNext = function() {
-//                return this.next;
-//            };
         };
 
         function List() {
-            this.head = new Node('start');
-            this.tail = new Node('end');
-//            this.head.setPrev(this.tail);
-//            this.tail.setNext(this.head);
-            this.head.prev = this.tail;
-            this.tail.next = this.head;
-
-            this.addNode = function(data) {
-                this.tail.next = new Node(data);
-                this.tail = this.tail.next;
-            };
+            this.head = null;
         };
+
+        List.prototype.add = function(node) {
+            var current;
+
+            if (this.head === null) {
+                this.head = node;
+            } else {
+                current = this.head;
+                while (current.next) {
+                    current = current.next;
+                }
+                current.next = node;
+            }
+        };
+
+        $scope.listContents = 'Kyle';
 
         $scope.list = new List();
 
+        var showContents = function() {
+            var current = $scope.list.head;
+            $scope.listContents = current.data;
+            while (current.next) {
+                current = current.next;
+                $scope.listContents += ' ' + current.data;
+            }
+        };
+
         $scope.createNode = function(data) {
-            $scope.list.addNode(data);
+            var node = new Node(data);
+            $scope.list.add(node);
+            showContents();
         };
     });
