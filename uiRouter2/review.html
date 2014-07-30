@@ -1,0 +1,19 @@
+<div>
+    <table class="table table-striped table-condensed table-bordered">
+        <thead>
+        <th>Registrant</th>
+        <th>Billed</th>
+        <th>Paid</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat=" registrant in events[i].registrants">
+                <td>{{registrant}}</td>
+                <td>$1</td>
+                <td>$2</td>
+            </tr>
+        </tbody>
+    </table>
+    <a ui-sref="registrants">Back</a>
+    <button ui-sref="confirmation" class="btn btn-primary">Submit</button>
+    <span class="text-danger">Yes I want to cancel {{events[i].registrants.length}} registrants.</span>
+</div>
