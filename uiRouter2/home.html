@@ -76,11 +76,9 @@
             <div>
                 <div class="panel panel-default" ng-repeat="event in events">
                     <div ui-sref="registrants" class="panel-heading" ng-click="changeEvent($index)">
-                        {{event.title}}
-                    </div>
-                    <div class="panel-body">
-                        <span style="float: left;">{{event.date}}</span>
-                        <span style="float: right;">{{event.registrants.length}} registrants</span>
+                        <span>{{event.title}}</span><br/>
+                        <span>{{event.date}}</span><br/>
+                        <span>{{event.registrants.length}} registrants</span>
                     </div>
                 </div>
             </div>

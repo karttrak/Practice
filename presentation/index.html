@@ -24,7 +24,7 @@
 <body ng-controller="myController">
     <div class="nrecaNavbar">
         <img style="margin: 5px 0px 0px 165px;" src="http://connectconference.coopwebbuilder2.com/sites/connectconference/files/images/nreca_logo_black.png">
-        <span style="margin-left: 730px; vertical-align: middle">KyleThornburgh.com</span>
+        <span style="margin-left: 730px; vertical-align: middle">InformationTechnology.com</span>
     </div>
     <div class="slideshowContainer">
         <div class="nrecaHeader">
@@ -38,7 +38,8 @@
             <button class="btn" ng-click="nextSlide()">Next</button>
         </div>
         <div ng-show="startSlideShow" ng-click="nextSlide()">
-            <img class="img-responsive img-rounded slide" src="{{slideShow[i]}}">
+            <img class="img-responsive img-rounded slide" src="{{slideShow[i].slide}}">
+            <h1 class="description">{{slideShow[i].description}}</h1>
             <ul ng-if="!startSlideShow">
                 <li>Websites</li>
                 <li>Automated testing</li>

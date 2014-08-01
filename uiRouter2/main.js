@@ -11,17 +11,17 @@ angular.module('myApp', ['ui.router'])
                 templateUrl: 'event.html'
             })
             .state('registrants', {
-                url: '/:registrants',
+                url: '/registrants',
                 parent: 'event',
                 templateUrl: 'registrants.html'
             })
             .state('review', {
-                url: '/:review',
+                url: '/review',
                 parent: 'event',
                 templateUrl: 'review.html'
             })
             .state('confirmation', {
-                url: '/:confirmation',
+                url: '/confirmation',
                 parent: 'event',
                 templateUrl: 'confirmation.html'
             })
