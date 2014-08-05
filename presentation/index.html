@@ -21,34 +21,27 @@
     <script src="main.js"></script>
 </head>
 
-<body ng-controller="myController">
-    <div class="nrecaNavbar">
-        <img style="margin: 5px 0px 0px 165px;" src="http://connectconference.coopwebbuilder2.com/sites/connectconference/files/images/nreca_logo_black.png">
-        <span style="margin-left: 730px; vertical-align: middle">InformationTechnology.com</span>
+<body ng-controller="myController" ng-keydown="changeSlide($event)">
+    <div style="background-color: black">
+        <div class="nrecaNavbar">
+            <img style="margin-top: 5px;" class="pull-left" src="http://connectconference.coopwebbuilder2.com/sites/connectconference/files/images/nreca_logo_black.png">
+            <span style="margin-top: 10px" class="pull-right">InformationTechnology.com</span>
+        </div>
     </div>
     <div class="slideshowContainer">
         <div class="nrecaHeader">
-            <img class="nrecaLogo" ng-click="startSlideShow = !startSlideShow" src="http://www.clasma.net/logos/Energy/NRECA/NRECA-Large.png">
+            <img class="nrecaLogo" ng-click="startSlideShow = !startSlideShow" src="http://www.nreca.coop/wp-content/uploads/2013/06/NRECA-logo.png">
+        </div>
+        <div class="slideShowButtons" ng-show="startSlideShow">
+            <button class="btn" ng-click="previousSlide()">Prev</button>
+            <button class="btn" ng-click="nextSlide()">Next</button>
         </div>
         <div ng-if="!startSlideShow">
             <img class="loadingWheel img-responsive" src="http://fc08.deviantart.net/fs47/f/2009/204/9/0/My_Funny_Loading_Animation_by_wired_down.gif">
         </div>
-        <div ng-show="startSlideShow" class="slideShowButtons">
-            <button class="btn" ng-click="previousSlide()">Prev</button>
-            <button class="btn" ng-click="nextSlide()">Next</button>
-        </div>
         <div ng-show="startSlideShow" ng-click="nextSlide()">
             <img class="img-responsive img-rounded slide" src="{{slideShow[i].slide}}">
             <h1 class="description">{{slideShow[i].description}}</h1>
-            <ul ng-if="!startSlideShow">
-                <li>Websites</li>
-                <li>Automated testing</li>
-                <li>Fake data</li>
-                <li>Meetings</li>
-                <li>Project development</li>
-                <li>Pair programming</li>
-                <li>Code collaboration (GitHub)</li>
-            </ul>
         </div>
     </div>
 </body>

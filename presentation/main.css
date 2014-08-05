@@ -5,26 +5,28 @@ html {
 body {
     background-color: #ddd;
     background-image: url(https://www.nreca.coop/wp-content/themes/modernize-v3-13/images/pattern/pattern-1.png);
+    font: normal bold 22px Georgia, sans-serif;
 }
 .nrecaNavbar {
-    background-color: black;
     height: 36px;
     font: normal small-caps bold 13px Georgia, sans-serif;
     color: white;
+    vertical-align: middle;
+    width: 950px;
+    margin: auto;
 }
 .slideshowContainer {
     background-color: white;
     box-shadow: 0px 0px 8px gray;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px auto 0 auto;
     height: 850px;
     width: 1000px;
+    padding: 20px;
 }
 .nrecaHeader {
     background-color: white;
     display: inline-block;
-    padding: 20px;
+    margin-bottom: 10px;
 }
 .nrecaLogo {
     height: 65px;
@@ -36,6 +38,10 @@ body {
     height: 63px;
     margin: 1px 0px 0px 4px;
     box-shadow: 0 0 5px black;
+}
+.slideShowButtons {
+    display: inline-block;
+    margin-left: 21%;
 }
 .loadingWheel {
     display: block;
@@ -51,13 +57,9 @@ body {
     margin-right: auto;
     margin-top: 10px;
     max-height: 650px;
-    min-height: 300px;
+    min-height: 400px;
     width: auto;
 }
 .description {
     text-align: center;
-}
-.slideShowButtons {
-    display: inline-block;
-    margin-left: 20%;
 }

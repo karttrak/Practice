@@ -3,16 +3,16 @@ angular.module('myApp', [])
         return {
             slides: [
                 {
-                    slide: 'http://upload.wikimedia.org/wikipedia/commons/b/bf/Rotunda_UVa_from_the_south_east.jpg',
-                    description: 'Rotunda'
+                    slide: 'http://www.nebbz.com/images/information-technology.jpg',
+                    description: ''
                 },
                 {
-                    slide: 'http://www.nebbz.com/images/information-technology.jpg',
-                    description: 'IT'
+                    slide: 'http://upload.wikimedia.org/wikipedia/commons/b/bf/Rotunda_UVa_from_the_south_east.jpg',
+                    description: ''
                 },
                 {
                     slide: 'http://esellermedia.com/files/2012/07/website-building1.jpg',
-                    description: 'Build Websites'
+                    description: ''
                 },
                 {
                     slide: 'http://i.imgur.com/WTvmFUP.jpg',
@@ -35,12 +35,8 @@ angular.module('myApp', [])
                     description: ''
                 },
                 {
-                    slide: 'http://expertaccess.cincom.com/wp-content/uploads/2014/03/462416239-IT-Due-Diligence.jpg',
-                    description: ''
-                },
-                {
                     slide: 'http://mediatrackers.org/assets/uploads/2013/11/Penn_State_Nittany_Lions2.jpg',
-                    description: 'Penn State'
+                    description: ''
                 },
                 {
                     slide: 'http://free.clipartof.com/77-Free-Clipart-Illustration-Of-A-Computer-Firewall.jpg',
@@ -51,20 +47,24 @@ angular.module('myApp', [])
                     description: ''
                 },
                 {
-                    slide: 'http://www.azgt.coop/wp-content/uploads/2012/11/NRECA_BMP.jpg',
+                    slide: 'http://img.eagleget.com/BUSINESS/com.prg.nreca2014/0.png',
                     description: 'What I have learned at NRECA'
                 },
                 {
+                    slide: 'http://expertaccess.cincom.com/wp-content/uploads/2014/03/462416239-IT-Due-Diligence.jpg',
+                    description: ''
+                },
+                {
                     slide: 'http://i.imgur.com/bRlVzpN.png',
-                    description: 'End'
+                    description: ''
                 }
             ]
         }
     })
-    .controller('myController', function($scope, myService) {
+    .controller('myController', function($scope, myService, $window, $location) {
         $scope.slideShow = myService.slides;
 
-        $scope.startSlideShow = true;
+        $scope.startSlideShow = false;
 
         $scope.i = 0;
 
@@ -75,5 +75,14 @@ angular.module('myApp', [])
         $scope.nextSlide = function() {
             if ($scope.i < $scope.slideShow.length) $scope.i++;
             if ($scope.i === $scope.slideShow.length) window.close();
+        };
+
+        $scope.changeSlide = function (e) {
+            var code = e.keyCode ? e.keyCode : e.which;
+            if (code === 39) { //up key
+                $scope.nextSlide();
+            } else if (code === 37) { //down key
+                $scope.previousSlide();
+            }
         };
     });

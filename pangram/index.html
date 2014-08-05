@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <script src="https://code.angularjs.org/1.3.0-beta.5/angular.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body ng-controller="myController">
+    <form ng-submit="removeRepeats()">
+        <input ng-model="sentence">
+        <input type="submit">
+    </form>
+    {{sentence}}<br/>
+    {{sentence.length}}
+</body>
+</html>
