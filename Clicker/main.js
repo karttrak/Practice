@@ -1,6 +1,6 @@
 angular.module('myApp', [])
 	.controller('myController', function($scope, $http, $timeout) {
-		$scope.totalClicks = 0;
+		$scope.totalClicks = 10000;
 		$scope.clickRate = 0;
 		$scope.upgrades = [
 		{
@@ -50,6 +50,4 @@ angular.module('myApp', [])
 		};
 
 		$scope.intervalFunction();
-
-
 	});

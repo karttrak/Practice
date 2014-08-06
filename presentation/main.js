@@ -61,12 +61,12 @@ angular.module('myApp', [])
             ]
         }
     })
-    .controller('myController', function($scope, myService, $window, $location) {
+    .controller('myController', function($scope, myService) {
         $scope.slideShow = myService.slides;
 
         $scope.startSlideShow = false;
 
-        $scope.i = 0;
+        $scope.i = -1;
 
         $scope.previousSlide = function() {
             if ($scope.i > 0) $scope.i--;
@@ -77,12 +77,17 @@ angular.module('myApp', [])
             if ($scope.i === $scope.slideShow.length) window.close();
         };
 
-        $scope.changeSlide = function (e) {
+        $scope.changeSlide = function(e) {
             var code = e.keyCode ? e.keyCode : e.which;
             if (code === 39) { //up key
                 $scope.nextSlide();
             } else if (code === 37) { //down key
                 $scope.previousSlide();
             }
+            if ($scope.i < 0) $scope.i = 0;
         };
+
+        setTimeout(function() {
+            $scope.startSlideShow = true;
+        }, 10);
     });

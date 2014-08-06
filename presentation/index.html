@@ -21,7 +21,7 @@
     <script src="main.js"></script>
 </head>
 
-<body ng-controller="myController" ng-keydown="changeSlide($event)">
+<body ng-controller="myController" ng-keyup="changeSlide($event)">
     <div style="background-color: black">
         <div class="nrecaNavbar">
             <img style="margin-top: 5px;" class="pull-left" src="http://connectconference.coopwebbuilder2.com/sites/connectconference/files/images/nreca_logo_black.png">
@@ -30,7 +30,7 @@
     </div>
     <div class="slideshowContainer">
         <div class="nrecaHeader">
-            <img class="nrecaLogo" ng-click="startSlideShow = !startSlideShow" src="http://www.nreca.coop/wp-content/uploads/2013/06/NRECA-logo.png">
+            <img class="nrecaLogo" src="http://www.nreca.coop/wp-content/uploads/2013/06/NRECA-logo.png">
         </div>
         <div class="slideShowButtons" ng-show="startSlideShow">
             <button class="btn" ng-click="previousSlide()">Prev</button>
@@ -38,6 +38,7 @@
         </div>
         <div ng-if="!startSlideShow">
             <img class="loadingWheel img-responsive" src="http://fc08.deviantart.net/fs47/f/2009/204/9/0/My_Funny_Loading_Animation_by_wired_down.gif">
+            <h1 class="description">Press any key to start</h1>
         </div>
         <div ng-show="startSlideShow" ng-click="nextSlide()">
             <img class="img-responsive img-rounded slide" src="{{slideShow[i].slide}}">
