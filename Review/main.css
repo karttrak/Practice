@@ -11,3 +11,7 @@ p {
     text-align: center;
     margin: 1px;
 }
+
+.red {
+    color: red;
+}
